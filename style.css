@@ -1,0 +1,1125 @@
+/*Animação suave de transição entre seções*/
+html{
+    scroll-behavior: smooth;
+}
+
+/*Alterando tamanho da barra de rolagem*/
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+/*Cor padrão da barra de rolagem*/
+::-webkit-scrollbar-thumb {
+    background: #ffc8c6;
+    border-radius: 10px;
+}
+
+/*Cor ao usuário passar o mouse por cima*/
+::-webkit-scrollbar-thumb:hover {
+    background: #c21c15;
+}       
+
+/*Geral*/
+body, ul, li, p{
+    margin: 0px;
+    padding: 0px;
+    list-style: none; /*Retira a marcação de lista*/
+    background-color: #FDFDFF;
+    font-family: 'Poppins', Arial, Verdana, sans-serif; /*Seleciona a fonte*/
+}
+
+/*Links*/
+a{
+    text-decoration: none; /*Retira o sublinhado*/
+    font-weight: 800;
+    font-size: 18px;
+}
+
+/*Header*/
+header{
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5.4px); /*Filtro que determina a intensidade do blur*/
+    -webkit-backdrop-filter: blur(5.4px);
+    box-shadow: 0px -5px 30px #1d0e6213;
+    position: fixed; /*Deixa o elemento fixo na tela*/
+    width: 100%;
+    height: 5em;
+    z-index: 1000; /*Garante que o elemento sempre vai estar na frente de tudo*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .menu li{  
+    background-color: rgba(0, 0, 255, 0);
+}
+
+header .menu li a{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 0;
+}
+
+/*Logos*/
+header .logo{
+    display: flex;
+    align-items: center;
+}
+
+header #title{
+    width: 3em;
+}
+
+header #font{
+    width: 15em;
+    margin-left: 15px;
+}
+
+header .menu{
+    display: flex;
+    background-color: rgba(0, 0, 255, 0);
+}
+
+header .menu li a:hover{
+    text-shadow: 0px -5px 20px #ffc8c6; /*Sombra no texto*/
+    color: #ffadad;
+    transition: 600ms;
+}
+
+header .menu li a:not(:hover){
+    text-shadow: 0px -5px 20px #1d0e6213; /*Sombra no texto*/
+    color: #c21c15;
+    transition: 400ms;
+}
+
+@media (max-width: 509px){
+    header .logo img{
+        padding-top: .5em;
+    }
+
+    header .menu li a{
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-left: 0;
+    }
+
+    header .menu li{  
+        background-color: rgba(0, 0, 255, 0);
+    }
+
+    a{
+        font-size: 14px;
+    }
+
+    header{
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(5.4px); /*Filtro que determina a intensidade do blur*/
+        -webkit-backdrop-filter: blur(5.4px);
+        box-shadow: 0px -5px 30px #1d0e6213;
+        position: fixed; /*Deixa o elemento fixo na tela*/
+        width: 100%;
+        height: 5em;
+        z-index: 1000; /*Garante que o elemento sempre vai estar na frente de tudo*/
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media (min-width: 510px) and (max-width: 968px){
+    header .logo img{
+        padding-top: .5em;
+    }
+
+    header .menu li a{
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 0;
+    }
+
+    header .menu li{  
+        background-color: rgba(0, 0, 255, 0);
+    }
+
+    a{
+        font-size: 16px;
+    }
+    
+    header{
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(5.4px); /*Filtro que determina a intensidade do blur*/
+        -webkit-backdrop-filter: blur(5.4px);
+        box-shadow: 0px -5px 30px #1d0e6213;
+        position: fixed; /*Deixa o elemento fixo na tela*/
+        width: 100%;
+        height: 6em;
+        z-index: 1000; /*Garante que o elemento sempre vai estar na frente de tudo*/
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+/*Home*/
+#Home{
+    width: 100%;
+    height: 88vh; /*Unidade relativa ao height, altura*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Container com o vídeo dentro*/
+#Home .container{
+    width: 85%;
+    height: 80%;
+    border-radius: 2em;
+    box-shadow: 0px -5px 20px #1d0e6213;
+    display: flex;
+    flex-direction: column; /*Dispõe os containeres em coluna*/
+    justify-content: center; /*Centraliza*/
+    overflow: hidden; /*Faz com que a barra de rolagem suma*/
+    position: relative;
+    margin-top: 4em;
+}
+
+#Home .container:hover{
+    transform: translateY(-1%); /*Ao passar o mouse, eleva 1% o elemento*/
+    transition: 400ms; /*Tempo de transição*/
+}
+
+#Home .container:not(:hover){
+    transition: 400ms; /*Tempo de transição*/
+}
+
+.carrossel {
+    margin-top: 6em;
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+.carrossel-container {
+    display: flex;
+    transition: transform 2s ease;
+}
+
+.carrossel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carrossel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilo das setas */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffadad;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* Efeitos de hover nas setas */
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*Vídeo*/
+#Home .container video{
+    transform: scale(1);
+    filter: blur(3px); /*Diminuindo a transparência do vídeo*/
+    overflow: hidden;
+    width: 100%;
+    height: auto; /*Torna a altura automática, se adequando conforme o tamanho dos elementos*/
+}
+
+#Home .container .container-elements{
+    position: absolute;
+    padding: 5vw; /*Unidade relativa ao width, largura*/
+}
+
+/*Título*/
+#Home .container .container-elements > h3{
+    font-size: 1.5vw;
+    font-weight: 500; /*Negrito*/
+    position: absolute;
+    color: #FDFDFF;
+    letter-spacing: 1px; /*Espaço entre cada letra*/
+    line-height: 1.25em;
+}
+
+/*Título principal*/
+#Home .container .container-elements h1{
+    font-size: 4.1vw;
+    width: 12em;
+    height: 2em;
+    font-weight: 500;
+    color: #FDFDFF;
+    letter-spacing: -1px;
+    line-height: 1.25em;
+}
+
+/*Botão de contato*/
+#Home .container .container-elements #call-button{
+    background-color: #c21c15;
+    box-shadow: 0px -5px 20px #1d0e6213;
+    width: 15vw;
+    height: 9vh;
+    border-radius: .5em;
+    border: 0; /*Retira a borda*/
+    color: white;
+    font-size: 1.7vw;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition-property: all;
+    transition-duration: .5s; /*Define o tempo de duração da transição*/
+}
+
+#Home .container .container-elements #call-button:hover{
+    cursor: pointer; /*Adiciona o icone de mãozinha para o cursor*/
+    background-color: #6146cf;
+    width: 15.2vw;
+}
+
+#Home .container .container-elements #call-button:not(:hover){
+    background-color: #c21c15;
+}
+
+/*Define a responsividade dependendo do tamanho de tela*/
+@media (max-width: 509px) {
+    #Home {
+        width: 100%;
+        height: 48vh;
+    }
+
+    #Home .container{
+        margin-top: 7em;
+        width: 85%;
+        height: 65%;
+    }
+    
+    #Home .container .container-elements {
+        padding: 3vw;
+    }
+
+    #Home .container .container-elements > h3 {
+        font-size: 2.5vw;
+    }
+
+    #Home .container .container-elements h1 {
+        font-size: 7vw;
+    }
+
+    #Home .container .container-elements #call-button {
+        width: 24vw;
+        height: 4vh;
+        font-size: 2.5vw;
+    }
+
+    #Home .container .container-elements #call-button:hover{
+        cursor: pointer;
+        background-color: #6146cf;
+        width: 24.5vw;
+    }
+
+    button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #ffadad;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .prev {
+        left: 0px;
+    }
+    
+    .next {
+        right: 0px;
+    }
+}
+
+@media (min-width: 510px) and (max-width: 767px) {
+    #Home {
+        width: 100%;
+        height: 75vh;
+    }
+
+    #Home .container{
+        margin-top: 7em;
+        width: 85%;
+        height: 65%;
+    }
+    
+    #Home .container .container-elements {
+        padding: 3vw;
+    }
+
+    #Home .container .container-elements > h3 {
+        font-size: 2.5vw;
+    }
+
+    #Home .container .container-elements h1 {
+        font-size: 7vw;
+    }
+
+    #Home .container .container-elements #call-button {
+        width: 22vw;
+        height: 6vh;
+        font-size: 2.5vw;
+    }
+
+    #Home .container .container-elements #call-button:hover{
+        cursor: pointer;
+        background-color: #6146cf;
+        width: 22.5vw;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 968px){
+    #Home {
+        width: 100%;
+        height: 110vh;
+    }
+
+    #Home .container{
+        margin-top: 7em;
+        width: 85%;
+        height: 75%;
+    }
+    
+    #Home .container .container-elements {
+        padding: 3vw;
+    }
+
+    #Home .container .container-elements > h3 {
+        font-size: 2vw;
+    }
+
+    #Home .container .container-elements h1 {
+        font-size: 6vw;
+    }
+
+    #Home .container .container-elements #call-button {
+        width: 22vw;
+        height: 8vh;
+        font-size: 2.5vw;
+    }
+
+    #Home .container .container-elements #call-button:hover{
+        cursor: pointer;
+        background-color: #6146cf;
+        width: 22.5vw;
+    }
+}
+
+
+/*Tempo Juntos*/
+#Tempo{
+    width: 100%;
+    height: 40em;
+    background: linear-gradient(130deg, #c21c15 14%, rgb(88, 7, 7) 100%);
+}
+
+.contador {
+    background-color: transparent;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.tempo {
+    display: flex;
+    justify-content: space-around;
+    font-size: 50px;
+    padding: 10px;
+    margin-bottom: 30px; 
+}
+
+.tempo div {
+    background-color: #fff;
+    color: #c21c15;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 4px 4px 4px rgb(255, 0, 0); /*left, top, right, bottom*/
+    width: 250px;
+    height: 150px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Para garantir que os valores e títulos fiquem empilhados */
+    text-align: center;
+}
+
+.titulo {
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+/*Título centralizado*/
+#Tempo h2{
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+    font-size: 2em; /*Tamanho de fonte*/
+    color: #FDFDFF;
+}
+
+/*Parte destacada do título*/
+#Tempo h2 span{
+    color: #ffc8c6
+}
+
+@media (max-width: 509px) {
+    #Tempo {
+        height: auto;
+        padding-bottom: 1em;
+    }
+
+    #Tempo {
+        height: auto;
+        padding-bottom: 1em;
+    }
+
+    .contador {
+        background-color: transparent;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 4px;
+        font-weight: bold;
+    }
+    
+    .tempo {
+        display: flex;
+        justify-content: space-around;
+        font-size: 50px;
+        padding: 30px;
+        margin-bottom: 20px; 
+    }
+    
+    .tempo div {
+        background-color: #fff;
+        color: #c21c15;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 1px 4px 4px 4px rgb(255, 0, 0); /*left, top, right, bottom*/
+        width: 80px;
+        height: 120px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* Para garantir que os valores e títulos fiquem empilhados */
+        text-align: center;
+    }
+    
+    .titulo {
+        font-size: 15px;
+        margin-top: 8px;
+    }
+}
+
+@media (min-width: 510px) and (max-width: 767px) {
+    #Tempo {
+        height: auto;
+        padding-bottom: 1em;
+    }
+
+    .contador {
+        background-color: transparent;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 4px;
+        font-weight: bold;
+    }
+    
+    .tempo {
+        display: flex;
+        justify-content: space-around;
+        font-size: 50px;
+        padding: 30px;
+        margin-bottom: 20px; 
+    }
+    
+    .tempo div {
+        background-color: #fff;
+        color: #c21c15;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 1px 4px 4px 4px rgb(255, 0, 0); /*left, top, right, bottom*/
+        width: 110px;
+        height: 130px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* Para garantir que os valores e títulos fiquem empilhados */
+        text-align: center;
+    }
+    
+    .titulo {
+        font-size: 15px;
+        margin-top: 5px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1124px){
+    #Tempo {
+        height: auto;
+        padding-bottom: 1em;
+    }
+
+    #Tempo .containers {
+        width: 70%;
+        height: 1em;
+        padding-left: 5%;
+        padding-right: 5%;
+        gap: 4em;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .contador {
+        background-color: transparent;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 4px;
+        font-weight: bold;
+    }
+    
+    .tempo {
+        display: flex;
+        justify-content: space-around;
+        font-size: 50px;
+        padding: 10px;
+        margin-bottom: 30px; 
+    }
+    
+    .tempo div {
+        background-color: #fff;
+        color: #c21c15;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 1px 4px 4px 4px rgb(255, 0, 0); /*left, top, right, bottom*/
+        width: 150px;
+        height: 130px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* Para garantir que os valores e títulos fiquem empilhados */
+        text-align: center;
+    }
+    
+    .titulo {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+}
+
+
+/*Sobre*/
+#Sobre{
+    width: 100%;
+    height: auto;
+    padding-top: 5em;
+}
+
+/*Contâiner com a imagem e os textos*/
+#Sobre .asides{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; /*Dispõe os elementos de forma espaçada igualmente e sem tocar nas bordas*/
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+/*Título*/
+#Sobre .asides .content h2{
+    width: 90%;
+    margin: 0 auto; 
+    margin-bottom: 1em;
+}
+
+#Sobre .asides .content h2 span{
+    color: #c21c15; /*Cor da fonte*/
+}
+
+/*Texto*/
+#Sobre .asides .content p{
+    background-color: #ffffff00;
+    text-align: justify;
+    width: 80%;
+    margin: 0 auto
+}
+
+/*Linha vertical dividindo o texto da imagem*/
+#Sobre .asides hr{
+    width: 10%;
+    height: .05em;
+    transform: rotate(90deg); /*Rotacionando a linha originalmente horizontal para vertical*/
+    background-color: #c21c15;
+}
+
+/*Imagem à direita do texto*/
+#Sobre .asides .image img{
+    width: 31em;
+}
+
+#Sobre .asides .image img:hover{
+    transform: translateY(-1%);
+    transition: 400ms;
+}
+
+#Sobre .asides .image img:not(:hover){
+    transition: 400ms;
+}
+
+@media (max-width: 767px) {
+    #Sobre{
+        padding-bottom: 1em;
+    }
+
+    #Sobre .asides .content h2 {
+        width: 90%;
+        text-align: center;
+    }
+
+    #Sobre .asides .content p {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+
+    #Sobre .asides .image img {
+        width: 25em;
+    }
+
+    #Sobre .asides hr{
+        transform: rotate(0); /*Retornando ao original de uma hr, que é uma linha horizontal*/
+        margin-top: 2.5em;
+        width: 10%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1223px){
+    #Sobre{
+        padding-bottom: 1em;
+    }
+
+    #Sobre .asides .content h2 {
+        width: 90%;
+    }
+
+    #Sobre .asides .content p {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+
+    #Sobre .asides .image img {
+        width: 30em;
+        max-width: 35em;
+    }
+
+    #Sobre .asides hr{
+        transform: rotate(0);
+        margin-top: 2.5em;
+        width: 20%;
+    }
+}
+
+@media (min-width: 1224px){
+    #Sobre{
+        padding-bottom: 1em;
+    }
+
+    #Sobre .asides {
+        flex-direction: row; /*Dispõe os elementos em linhas*/
+    }
+
+    #Sobre .asides .content h2 {
+        font-size: 27px;
+        width: 20em;
+    }
+
+    #Sobre .asides .content p {
+        font-size: 20px;
+        width: 26.75em;
+    }
+
+    #Sobre .asides .image img {
+        width: 31em;
+    }
+}
+
+
+/*Musica*/
+#Musica {
+    background-color: #c21c15;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/*Configuração das fotos*/
+.pictures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%; /*Limita o tamanho para não exceder o tamanho da tela*/
+}
+
+/*Cards*/
+.Musica-container {
+    flex: 1 1 30%; /*Disposição dos elementos*/
+    max-width: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.Musica-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.Musica-container img:hover{
+    transform: translateY(-1%);
+    transition: 400ms;
+}
+
+.Musica-container img:not(:hover){
+    transition: 400ms;
+}
+
+
+@media (max-width: 1200px) {
+    .Musica-container {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 800px) {
+    .Musica-container {
+        flex: 1 1 80%;
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .Musica-container {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/*Título*/
+#Musica h2 {
+    color: #fff;
+    font-size: 2rem; 
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    font-weight: 700;
+}
+
+#Musica h2 span{
+    color: #ffadad;
+}
+
+#Musica .pictures{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /*Espaçamento igual entre os elementos*/
+}
+
+#Musica .pictures .Musica-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Nome do integrante*/
+#Musica .pictures .Musica-container h3 span{
+    color: #c21c15;
+}
+
+/*Função na empresa*/
+#Musica .pictures .Musica-container h4{
+    position: absolute;
+    margin-top: 19em;
+}
+
+#Musica .pictures .Musica-container img{
+    width: 16em;
+    border-radius: 2em;
+    box-shadow: 0px 9px 30px #1d0e621f;
+}
+
+@media (max-width: 1200px) {
+    #Musica h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 800px) {
+    #Musica h2 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 500px) {
+    #Musica h2 {
+        font-size: 1.6rem;
+    }
+}
+
+
+/*Projeto*/
+#Projeto{
+    width: 100%;
+    height: 36em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Título*/
+#Projeto h2{
+    width: 100%;
+    padding-top: 2em;
+    padding-right: 0em;
+    margin-bottom: 3em;
+    text-align: center; /*Centraliza o texto*/
+}
+
+#Projeto h2 span{
+    color: #c21c15;
+}
+
+/*Cards*/
+#Projeto .client-containers{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5em;
+    justify-content: center;
+}
+
+/*Health Treats*/
+#Projeto .client-containers .client-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #93B6EE;
+    width: 35em;
+    height: 20em;
+    border-radius: 2em;
+    box-shadow: 0px 9px 20px #1d0e6241; /*Sombra do contâiner*/
+}
+
+/*Arriba*/
+#Projeto .client-containers .client-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9e8cc;
+    width: 35em;
+    height: 20em;
+    border-radius: 2em;
+    box-shadow: 0px 9px 20px #1d0e6241;
+}
+
+/*Manipulando a animação das classes de forma conjunta*/
+.client-containers .client-1:hover,
+.client-containers .client-2:hover{
+    transform: translateY(-1%);
+    transition: 400ms;
+}
+
+.client-containers .client-1:not(:hover),
+.client-containers .client-2:not(:hover){
+    transition: 400ms;
+}
+
+@media (max-width: 767px) {
+    #Projeto{
+        height: 40em;
+    }
+
+    #Projeto h2 {
+        width: 80%;
+        padding-top: 0em;
+    }
+    
+    #Projeto .client-containers {
+        gap: 4em;
+    }
+
+    #Projeto .client-containers .client-1 img{
+        width: 50%;
+        height: 6em;
+    }
+
+    #Projeto .client-containers .client-2 img{
+        width: 50%;
+        height: 10em;
+    }
+
+    #Projeto .client-containers .client-1,
+    #Projeto .client-containers .client-2{
+        width: 80%;
+        height: 17em;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1224px){
+    #Projeto{
+        height: 40em;
+    }
+          
+    
+    #Projeto h2 {
+        width: 60%;
+        padding-top: 0em;
+    }
+
+    #Projeto .client-containers {
+        gap: 4em;
+    }
+
+    #Projeto .client-containers .client-1,
+    #Projeto .client-containers .client-2{
+        width: 80%;
+    }
+
+    #Projeto .client-containers .client-1 img{
+        width: 45%;
+        height: 8em;
+    }
+
+    #Projeto .client-containers .client-2 img{
+        width: 50%;
+        height: 15em;
+    }
+}
+
+/*Inicio*/
+#Inicio {
+    width: 100%;
+    height: 46em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Título*/
+#Inicio h2 {
+    font-size: 27px;
+    font-weight: 900;
+}
+
+#Inicio h2 span {
+    color: #c21c15;
+}
+
+/*Texto*/
+#Inicio p {
+    background-color: #ffffff00;
+    font-size: 20px;
+    text-align: center;
+    width: 28em;
+    padding-top: 1em;
+    position: relative;
+    bottom: 1.5em;
+}
+
+/*Mapa Google*/
+#Inicio iframe{
+    width: 80%;
+    border-radius: 2em;
+    box-shadow: 0px 9px 20px #1d0e6241;
+}
+
+/*Animação do mapa*/
+#Inicio iframe:hover{
+    transform: translateY(-1%);
+    transition: 400ms; 
+}
+
+/*Animação do mapa*/
+#Inicio iframe:not(:hover){
+    transition: 400ms; 
+}
+
+@media (max-width: 767px) {
+    #Inicio {
+        height: auto;
+        padding-bottom: 4em;
+        padding-top: 16em;
+    }
+
+    #Inicio h2 {
+        font-size: 24px;
+    }
+
+    #Inicio p {
+        width: 90%;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1224px){
+    #Inicio {
+        height: auto;
+        padding-bottom: 4em;
+        padding-top: 18em;
+    }
+
+    #Inicio h2 {
+        font-size: 24px;
+    }
+
+    #Inicio p {
+        width: 90%;
+        font-size: 18px;
+    }
+}
