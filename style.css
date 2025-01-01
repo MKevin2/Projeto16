@@ -173,54 +173,33 @@ header .menu li a:not(:hover){
 }
 
 /*Container com o vídeo dentro*/
-#Home .container{
-    width: 85%;
-    height: 80%;
-    border-radius: 2em;
-    box-shadow: 0px -5px 20px #1d0e6213;
-    display: flex;
-    flex-direction: column; /*Dispõe os containeres em coluna*/
-    justify-content: center; /*Centraliza*/
-    overflow: hidden; /*Faz com que a barra de rolagem suma*/
-    position: relative;
-    margin-top: 4em;
-}
-
-#Home .container:hover{
-    transform: translateY(-1%); /*Ao passar o mouse, eleva 1% o elemento*/
-    transition: 400ms; /*Tempo de transição*/
-}
-
-#Home .container:not(:hover){
-    transition: 400ms; /*Tempo de transição*/
-}
-
-.carrossel {
+#Home .carrossel {
     margin-top: 6em;
     position: relative;
     width: 80%;
     max-width: 800px;
     overflow: hidden;
+    box-shadow: 0px -5px 30px #ffadad;
 }
 
-.carrossel-container {
+#Home .carrossel-container {
     display: flex;
     transition: transform 2s ease;
 }
 
-.carrossel-slide {
+#Home .carrossel-slide {
     min-width: 100%;
     box-sizing: border-box;
 }
 
-.carrossel-slide img {
+#Home .carrossel-slide img {
     width: 100%;
     height: auto;
     display: block;
 }
 
 /* Estilo das setas */
-button {
+#Home button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -231,208 +210,47 @@ button {
     cursor: pointer;
 }
 
-.prev {
-    left: 20px;
+#Home .prev {
+    left: 0px;
 }
 
-.next {
-    right: 20px;
+#Home .next {
+    right: 0px;
 }
 
 /* Efeitos de hover nas setas */
-button:hover {
+#Home button:hover {
     background-color: rgba(0, 0, 0, 0.8);
-}
-
-/*Vídeo*/
-#Home .container video{
-    transform: scale(1);
-    filter: blur(3px); /*Diminuindo a transparência do vídeo*/
-    overflow: hidden;
-    width: 100%;
-    height: auto; /*Torna a altura automática, se adequando conforme o tamanho dos elementos*/
-}
-
-#Home .container .container-elements{
-    position: absolute;
-    padding: 5vw; /*Unidade relativa ao width, largura*/
-}
-
-/*Título*/
-#Home .container .container-elements > h3{
-    font-size: 1.5vw;
-    font-weight: 500; /*Negrito*/
-    position: absolute;
-    color: #FDFDFF;
-    letter-spacing: 1px; /*Espaço entre cada letra*/
-    line-height: 1.25em;
-}
-
-/*Título principal*/
-#Home .container .container-elements h1{
-    font-size: 4.1vw;
-    width: 12em;
-    height: 2em;
-    font-weight: 500;
-    color: #FDFDFF;
-    letter-spacing: -1px;
-    line-height: 1.25em;
-}
-
-/*Botão de contato*/
-#Home .container .container-elements #call-button{
-    background-color: #c21c15;
-    box-shadow: 0px -5px 20px #1d0e6213;
-    width: 15vw;
-    height: 9vh;
-    border-radius: .5em;
-    border: 0; /*Retira a borda*/
-    color: white;
-    font-size: 1.7vw;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition-property: all;
-    transition-duration: .5s; /*Define o tempo de duração da transição*/
-}
-
-#Home .container .container-elements #call-button:hover{
-    cursor: pointer; /*Adiciona o icone de mãozinha para o cursor*/
-    background-color: #6146cf;
-    width: 15.2vw;
-}
-
-#Home .container .container-elements #call-button:not(:hover){
-    background-color: #c21c15;
 }
 
 /*Define a responsividade dependendo do tamanho de tela*/
 @media (max-width: 509px) {
     #Home {
-        width: 100%;
-        height: 48vh;
+        height: 44vh;
     }
 
-    #Home .container{
-        margin-top: 7em;
-        width: 85%;
-        height: 65%;
-    }
-    
-    #Home .container .container-elements {
-        padding: 3vw;
-    }
-
-    #Home .container .container-elements > h3 {
-        font-size: 2.5vw;
-    }
-
-    #Home .container .container-elements h1 {
-        font-size: 7vw;
-    }
-
-    #Home .container .container-elements #call-button {
-        width: 24vw;
-        height: 4vh;
-        font-size: 2.5vw;
-    }
-
-    #Home .container .container-elements #call-button:hover{
-        cursor: pointer;
-        background-color: #6146cf;
-        width: 24.5vw;
-    }
-
-    button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #ffadad;
-        border: none;
+    #Home button {
         padding: 10px;
-        cursor: pointer;
-    }
-
-    .prev {
-        left: 0px;
-    }
-    
-    .next {
-        right: 0px;
     }
 }
 
 @media (min-width: 510px) and (max-width: 767px) {
     #Home {
-        width: 100%;
-        height: 75vh;
+        height: 60vh;
     }
 
-    #Home .container{
-        margin-top: 7em;
-        width: 85%;
-        height: 65%;
-    }
-    
-    #Home .container .container-elements {
-        padding: 3vw;
-    }
-
-    #Home .container .container-elements > h3 {
-        font-size: 2.5vw;
-    }
-
-    #Home .container .container-elements h1 {
-        font-size: 7vw;
-    }
-
-    #Home .container .container-elements #call-button {
-        width: 22vw;
-        height: 6vh;
-        font-size: 2.5vw;
-    }
-
-    #Home .container .container-elements #call-button:hover{
-        cursor: pointer;
-        background-color: #6146cf;
-        width: 22.5vw;
+    #Home button {
+        padding: 15px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 968px){
     #Home {
-        width: 100%;
-        height: 110vh;
+        height: 80vh;
     }
 
-    #Home .container{
-        margin-top: 7em;
-        width: 85%;
-        height: 75%;
-    }
-    
-    #Home .container .container-elements {
-        padding: 3vw;
-    }
-
-    #Home .container .container-elements > h3 {
-        font-size: 2vw;
-    }
-
-    #Home .container .container-elements h1 {
-        font-size: 6vw;
-    }
-
-    #Home .container .container-elements #call-button {
-        width: 22vw;
-        height: 8vh;
-        font-size: 2.5vw;
-    }
-
-    #Home .container .container-elements #call-button:hover{
-        cursor: pointer;
-        background-color: #6146cf;
-        width: 22.5vw;
+    #Home button {
+        padding: 18px;
     }
 }
 
@@ -444,17 +262,17 @@ button:hover {
     background: linear-gradient(130deg, #c21c15 14%, rgb(88, 7, 7) 100%);
 }
 
-.contador {
+#Tempo .contador {
     background-color: transparent;
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 10px;
     text-align: center;
-    font-size: 24px;
+    font-size: 2em;
     font-weight: bold;
 }
 
-.tempo {
+#Tempo .tempo {
     display: flex;
     justify-content: space-around;
     font-size: 50px;
@@ -462,7 +280,7 @@ button:hover {
     margin-bottom: 30px; 
 }
 
-.tempo div {
+#Tempo .tempo div {
     background-color: #fff;
     color: #c21c15;
     padding: 20px;
@@ -477,7 +295,7 @@ button:hover {
     text-align: center;
 }
 
-.titulo {
+#Tempo .titulo {
     font-size: 30px;
     margin-top: 15px;
 }
@@ -502,45 +320,23 @@ button:hover {
         padding-bottom: 1em;
     }
 
-    #Tempo {
-        height: auto;
-        padding-bottom: 1em;
-    }
-
-    .contador {
-        background-color: transparent;
+    #Tempo .contador {
         padding-top: 10px;
-        padding-bottom: 20px;
-        border-radius: 10px;
-        text-align: center;
         font-size: 4px;
-        font-weight: bold;
     }
     
-    .tempo {
-        display: flex;
-        justify-content: space-around;
-        font-size: 50px;
+    #Tempo .tempo {
         padding: 30px;
         margin-bottom: 20px; 
     }
     
-    .tempo div {
-        background-color: #fff;
-        color: #c21c15;
+    #Tempo .tempo div {
         padding: 10px;
-        border-radius: 10px;
-        box-shadow: 1px 4px 4px 4px rgb(255, 0, 0); /*left, top, right, bottom*/
         width: 80px;
         height: 120px; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; /* Para garantir que os valores e títulos fiquem empilhados */
-        text-align: center;
     }
     
-    .titulo {
+    #Tempo .titulo {
         font-size: 15px;
         margin-top: 8px;
     }
@@ -552,40 +348,23 @@ button:hover {
         padding-bottom: 1em;
     }
 
-    .contador {
-        background-color: transparent;
+    #Tempo .contador {
         padding-top: 10px;
-        padding-bottom: 20px;
-        border-radius: 10px;
-        text-align: center;
         font-size: 4px;
-        font-weight: bold;
     }
     
-    .tempo {
-        display: flex;
-        justify-content: space-around;
-        font-size: 50px;
+    #Tempo .tempo {
         padding: 30px;
         margin-bottom: 20px; 
     }
     
-    .tempo div {
-        background-color: #fff;
-        color: #c21c15;
+    #Tempo .tempo div {
         padding: 20px;
-        border-radius: 10px;
-        box-shadow: 1px 4px 4px 4px rgb(255, 0, 0); /*left, top, right, bottom*/
         width: 110px;
         height: 130px; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; /* Para garantir que os valores e títulos fiquem empilhados */
-        text-align: center;
     }
     
-    .titulo {
+    #Tempo .titulo {
         font-size: 15px;
         margin-top: 5px;
     }
@@ -597,27 +376,12 @@ button:hover {
         padding-bottom: 1em;
     }
 
-    #Tempo .containers {
-        width: 70%;
-        height: 1em;
-        padding-left: 5%;
-        padding-right: 5%;
-        gap: 4em;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .contador {
-        background-color: transparent;
+    #Tempo .contador {
         padding-top: 20px;
-        padding-bottom: 20px;
-        border-radius: 10px;
-        text-align: center;
         font-size: 4px;
-        font-weight: bold;
     }
     
-    .tempo {
+    #Tempo .tempo {
         display: flex;
         justify-content: space-around;
         font-size: 50px;
@@ -625,26 +389,16 @@ button:hover {
         margin-bottom: 30px; 
     }
     
-    .tempo div {
-        background-color: #fff;
-        color: #c21c15;
+    #Tempo .tempo div {
         padding: 20px;
-        border-radius: 10px;
-        box-shadow: 1px 4px 4px 4px rgb(255, 0, 0); /*left, top, right, bottom*/
         width: 150px;
         height: 130px; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; /* Para garantir que os valores e títulos fiquem empilhados */
-        text-align: center;
     }
     
-    .titulo {
+    #Tempo .titulo {
         font-size: 20px;
         margin-top: 15px;
     }
-
 }
 
 
@@ -851,13 +605,13 @@ button:hover {
 /*Título*/
 #Musica h2 {
     color: #fff;
-    font-size: 2rem; 
+    font-size: 2em; /*Tamanho de fonte*/
     width: 100%;
     text-align: center;
     padding: 0;
     margin: 0 auto;
     margin-bottom: 2em;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 #Musica h2 span{
@@ -1015,7 +769,6 @@ button:hover {
         height: 40em;
     }
           
-    
     #Projeto h2 {
         width: 60%;
         padding-top: 0em;
@@ -1044,39 +797,31 @@ button:hover {
 /*Inicio*/
 #Inicio {
     width: 100%;
-    height: 46em;
+    height: 40em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #c21c15;
 }
 
 /*Título*/
 #Inicio h2 {
-    font-size: 27px;
-    font-weight: 900;
+    font-size: 2em; /*Tamanho de fonte*/
+    font-weight: bold;
+    color: #fff;
 }
 
+/*Parte destacada do título*/
 #Inicio h2 span {
-    color: #c21c15;
-}
-
-/*Texto*/
-#Inicio p {
-    background-color: #ffffff00;
-    font-size: 20px;
-    text-align: center;
-    width: 28em;
-    padding-top: 1em;
-    position: relative;
-    bottom: 1.5em;
+    color: #ffadad;
 }
 
 /*Mapa Google*/
 #Inicio iframe{
     width: 80%;
     border-radius: 2em;
-    box-shadow: 0px 9px 20px #1d0e6241;
+    box-shadow: 0px 9px 20px #ffadad;
 }
 
 /*Animação do mapa*/
@@ -1100,11 +845,6 @@ button:hover {
     #Inicio h2 {
         font-size: 24px;
     }
-
-    #Inicio p {
-        width: 90%;
-        font-size: 18px;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 1224px){
@@ -1116,10 +856,5 @@ button:hover {
 
     #Inicio h2 {
         font-size: 24px;
-    }
-
-    #Inicio p {
-        width: 90%;
-        font-size: 18px;
     }
 }
