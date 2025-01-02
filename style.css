@@ -95,7 +95,7 @@ header .menu li a:not(:hover){
 
 @media (max-width: 509px){
     header .logo img{
-        padding-top: .5em;
+        padding-top: .15em;
     }
 
     header .menu li a{
@@ -173,7 +173,7 @@ header .menu li a:not(:hover){
 }
 
 /*Container com o vídeo dentro*/
-#Home .carrossel {
+#Home .carrossel{
     margin-top: 6em;
     position: relative;
     width: 80%;
@@ -182,24 +182,24 @@ header .menu li a:not(:hover){
     box-shadow: 0px -5px 30px #ffadad;
 }
 
-#Home .carrossel-container {
+#Home .carrossel-container{
     display: flex;
     transition: transform 2s ease;
 }
 
-#Home .carrossel-slide {
+#Home .carrossel-slide{
     min-width: 100%;
     box-sizing: border-box;
 }
 
-#Home .carrossel-slide img {
+#Home .carrossel-slide img{
     width: 100%;
     height: auto;
     display: block;
 }
 
 /* Estilo das setas */
-#Home button {
+#Home button{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -210,46 +210,46 @@ header .menu li a:not(:hover){
     cursor: pointer;
 }
 
-#Home .prev {
+#Home .prev{
     left: 0px;
 }
 
-#Home .next {
+#Home .next{
     right: 0px;
 }
 
 /* Efeitos de hover nas setas */
-#Home button:hover {
+#Home button:hover{
     background-color: rgba(0, 0, 0, 0.8);
 }
 
 /*Define a responsividade dependendo do tamanho de tela*/
-@media (max-width: 509px) {
-    #Home {
+@media (max-width: 509px){
+    #Home{
         height: 44vh;
     }
 
-    #Home button {
+    #Home button{
         padding: 10px;
     }
 }
 
-@media (min-width: 510px) and (max-width: 767px) {
-    #Home {
+@media (min-width: 510px) and (max-width: 767px){
+    #Home{
         height: 60vh;
     }
 
-    #Home button {
+    #Home button{
         padding: 15px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 968px){
-    #Home {
+    #Home{
         height: 80vh;
     }
 
-    #Home button {
+    #Home button{
         padding: 18px;
     }
 }
@@ -314,74 +314,74 @@ header .menu li a:not(:hover){
     color: #ffc8c6
 }
 
-@media (max-width: 509px) {
+@media (max-width: 509px){
     #Tempo {
         height: auto;
         padding-bottom: 1em;
     }
 
-    #Tempo .contador {
+    #Tempo .contador{
         padding-top: 10px;
         font-size: 4px;
     }
     
-    #Tempo .tempo {
+    #Tempo .tempo{
         padding: 30px;
         margin-bottom: 20px; 
     }
     
-    #Tempo .tempo div {
+    #Tempo .tempo div{
         padding: 10px;
         width: 80px;
         height: 120px; 
     }
     
-    #Tempo .titulo {
+    #Tempo .titulo{
         font-size: 15px;
         margin-top: 8px;
     }
 }
 
 @media (min-width: 510px) and (max-width: 767px) {
-    #Tempo {
+    #Tempo{
         height: auto;
         padding-bottom: 1em;
     }
 
-    #Tempo .contador {
+    #Tempo .contador{
         padding-top: 10px;
         font-size: 4px;
     }
     
-    #Tempo .tempo {
+    #Tempo .tempo{
         padding: 30px;
         margin-bottom: 20px; 
     }
     
-    #Tempo .tempo div {
+    #Tempo .tempo div{
         padding: 20px;
         width: 110px;
         height: 130px; 
     }
     
-    #Tempo .titulo {
+    #Tempo .titulo{
         font-size: 15px;
         margin-top: 5px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1124px){
-    #Tempo {
+    #Tempo{
         height: auto;
         padding-bottom: 1em;
     }
 
-    #Tempo .contador {
+    #Tempo .contador{
         padding-top: 20px;
         font-size: 4px;
     }
     
-    #Tempo .tempo {
+    #Tempo .tempo{
         display: flex;
         justify-content: space-around;
         font-size: 50px;
@@ -389,13 +389,13 @@ header .menu li a:not(:hover){
         margin-bottom: 30px; 
     }
     
-    #Tempo .tempo div {
+    #Tempo .tempo div{
         padding: 20px;
         width: 150px;
         height: 130px; 
     }
     
-    #Tempo .titulo {
+    #Tempo .titulo{
         font-size: 20px;
         margin-top: 15px;
     }
@@ -405,8 +405,8 @@ header .menu li a:not(:hover){
 /*Sobre*/
 #Sobre{
     width: 100%;
-    height: auto;
-    padding-top: 5em;
+    height: 35em;
+    padding-top: 3em;
 }
 
 /*Contâiner com a imagem e os textos*/
@@ -421,6 +421,9 @@ header .menu li a:not(:hover){
 
 /*Título*/
 #Sobre .asides .content h2{
+    color: #141414;
+    font-size: 2em;
+    font-weight: bold;
     width: 90%;
     margin: 0 auto; 
     margin-bottom: 1em;
@@ -433,9 +436,10 @@ header .menu li a:not(:hover){
 /*Texto*/
 #Sobre .asides .content p{
     background-color: #ffffff00;
+    color: #141414;
     text-align: justify;
     width: 80%;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 /*Linha vertical dividindo o texto da imagem*/
@@ -448,7 +452,7 @@ header .menu li a:not(:hover){
 
 /*Imagem à direita do texto*/
 #Sobre .asides .image img{
-    width: 31em;
+    height: 27em;
 }
 
 #Sobre .asides .image img:hover{
@@ -463,10 +467,11 @@ header .menu li a:not(:hover){
 @media (max-width: 767px) {
     #Sobre{
         padding-bottom: 1em;
+        height: auto;
     }
 
     #Sobre .asides .content h2 {
-        width: 90%;
+        width: 95%;
         text-align: center;
     }
 
@@ -476,13 +481,14 @@ header .menu li a:not(:hover){
     }
 
     #Sobre .asides .image img {
-        width: 25em;
+        height: 20em;
     }
 
     #Sobre .asides hr{
         transform: rotate(0); /*Retornando ao original de uma hr, que é uma linha horizontal*/
         margin-top: 2.5em;
-        width: 10%;
+        width: 15%;
+        background-color: #c21c15;
     }
 }
 
@@ -509,12 +515,14 @@ header .menu li a:not(:hover){
         transform: rotate(0);
         margin-top: 2.5em;
         width: 20%;
+        background-color: #c21c15;
     }
 }
 
 @media (min-width: 1224px){
     #Sobre{
         padding-bottom: 1em;
+        height: auto;
     }
 
     #Sobre .asides {
@@ -530,76 +538,33 @@ header .menu li a:not(:hover){
         font-size: 20px;
         width: 26.75em;
     }
-
-    #Sobre .asides .image img {
-        width: 31em;
-    }
 }
 
 
 /*Musica*/
 #Musica {
-    background-color: #c21c15;
+    background: linear-gradient(130deg, #c21c15 14%, rgb(88, 7, 7) 100%);
     text-align: center;
-    padding: 20px;
+    padding: 40px;
     overflow: hidden;
+    height: 50em;
 }
 
-/*Configuração das fotos*/
-.pictures {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 100%; /*Limita o tamanho para não exceder o tamanho da tela*/
+#Musica video{
+    opacity: 0.8; /* Torna o vídeo um pouco transparente */
+    filter: grayscale(50%); 
+    border: 5px solid #333; /* Borda escura */
+    box-shadow: 0px 9px 20px #ffadad;
+    border-radius: 10px; 
 }
 
-/*Cards*/
-.Musica-container {
-    flex: 1 1 30%; /*Disposição dos elementos*/
-    max-width: 30%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-.Musica-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-}
-
-.Musica-container img:hover{
+#Musica video:hover{
     transform: translateY(-1%);
     transition: 400ms;
 }
 
-.Musica-container img:not(:hover){
+#Musica video:not(:hover){
     transition: 400ms;
-}
-
-
-@media (max-width: 1200px) {
-    .Musica-container {
-        flex: 1 1 45%;
-        max-width: 45%;
-    }
-}
-
-@media (max-width: 800px) {
-    .Musica-container {
-        flex: 1 1 80%;
-        max-width: 80%;
-    }
-}
-
-@media (max-width: 500px) {
-    .Musica-container {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
 }
 
 /*Título*/
@@ -610,7 +575,7 @@ header .menu li a:not(:hover){
     text-align: center;
     padding: 0;
     margin: 0 auto;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
     font-weight: bold;
 }
 
@@ -618,38 +583,15 @@ header .menu li a:not(:hover){
     color: #ffadad;
 }
 
-#Musica .pictures{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /*Espaçamento igual entre os elementos*/
-}
-
-#Musica .pictures .Musica-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/*Nome do integrante*/
-#Musica .pictures .Musica-container h3 span{
-    color: #c21c15;
-}
-
-/*Função na empresa*/
-#Musica .pictures .Musica-container h4{
-    position: absolute;
-    margin-top: 19em;
-}
-
-#Musica .pictures .Musica-container img{
-    width: 16em;
-    border-radius: 2em;
-    box-shadow: 0px 9px 30px #1d0e621f;
-}
 
 @media (max-width: 1200px) {
     #Musica h2 {
         font-size: 1.8rem;
+    }
+
+    #Musica video{
+        width: 90%;
+        height: auto;
     }
 }
 
@@ -657,11 +599,25 @@ header .menu li a:not(:hover){
     #Musica h2 {
         font-size: 1.7rem;
     }
+
+    #Musica video{
+        width: 90%;
+        height: auto;
+    }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 509px) {
     #Musica h2 {
-        font-size: 1.6rem;
+        font-size: 2em;
+    }
+
+    #Musica video{
+        width: 90%;
+        height: auto;
+    }
+
+    #Musica {
+        height: 39em;
     }
 }
 
@@ -678,10 +634,12 @@ header .menu li a:not(:hover){
 /*Título*/
 #Projeto h2{
     width: 100%;
-    padding-top: 2em;
+    padding-top: .5em;
     padding-right: 0em;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
     text-align: center; /*Centraliza o texto*/
+    font-size: 2em;
+    color: #141414; 
 }
 
 #Projeto h2 span{
@@ -692,7 +650,6 @@ header .menu li a:not(:hover){
 #Projeto .client-containers{
     display: flex;
     flex-wrap: wrap;
-    gap: 5em;
     justify-content: center;
 }
 
@@ -701,67 +658,42 @@ header .menu li a:not(:hover){
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #93B6EE;
-    width: 35em;
-    height: 20em;
-    border-radius: 2em;
-    box-shadow: 0px 9px 20px #1d0e6241; /*Sombra do contâiner*/
-}
-
-/*Arriba*/
-#Projeto .client-containers .client-2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f9e8cc;
-    width: 35em;
-    height: 20em;
-    border-radius: 2em;
-    box-shadow: 0px 9px 20px #1d0e6241;
+    background-color: #c21c15;
+    width: 1200px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 9px 20px #ffadad;
 }
 
 /*Manipulando a animação das classes de forma conjunta*/
-.client-containers .client-1:hover,
-.client-containers .client-2:hover{
+.client-containers .client-1:hover{
     transform: translateY(-1%);
     transition: 400ms;
 }
 
-.client-containers .client-1:not(:hover),
-.client-containers .client-2:not(:hover){
+.client-containers .client-1:not(:hover){
     transition: 400ms;
 }
 
 @media (max-width: 767px) {
     #Projeto{
-        height: 40em;
+        height: 24em;
     }
 
-    #Projeto h2 {
+    #Projeto h2{
         width: 80%;
-        padding-top: 0em;
-    }
-    
-    #Projeto .client-containers {
-        gap: 4em;
+        padding-top: 1em;
     }
 
     #Projeto .client-containers .client-1 img{
-        width: 50%;
-        height: 6em;
+        width: 95%;
+        height: 100%;
     }
 
-    #Projeto .client-containers .client-2 img{
-        width: 50%;
-        height: 10em;
+    #Projeto .client-containers .client-1{
+        width: 95%;
+        height: 12em;
     }
-
-    #Projeto .client-containers .client-1,
-    #Projeto .client-containers .client-2{
-        width: 80%;
-        height: 17em;
-    }
-
 }
 
 @media (min-width: 768px) and (max-width: 1224px){
@@ -774,12 +706,7 @@ header .menu li a:not(:hover){
         padding-top: 0em;
     }
 
-    #Projeto .client-containers {
-        gap: 4em;
-    }
-
-    #Projeto .client-containers .client-1,
-    #Projeto .client-containers .client-2{
+    #Projeto .client-containers .client-1{
         width: 80%;
     }
 
@@ -787,33 +714,33 @@ header .menu li a:not(:hover){
         width: 45%;
         height: 8em;
     }
-
-    #Projeto .client-containers .client-2 img{
-        width: 50%;
-        height: 15em;
-    }
 }
 
 /*Inicio*/
 #Inicio {
+    background: linear-gradient(130deg, #c21c15 14%, rgb(88, 7, 7) 100%);
     width: 100%;
     height: 40em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #c21c15;
 }
 
 /*Título*/
 #Inicio h2 {
-    font-size: 2em; /*Tamanho de fonte*/
-    font-weight: bold;
     color: #fff;
+    font-size: 2em; /*Tamanho de fonte*/
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+    margin-top: 2em;
+    font-weight: bold;
 }
 
-/*Parte destacada do título*/
-#Inicio h2 span {
+#Inicio h2 span{
     color: #ffadad;
 }
 
@@ -822,6 +749,7 @@ header .menu li a:not(:hover){
     width: 80%;
     border-radius: 2em;
     box-shadow: 0px 9px 20px #ffadad;
+    margin-bottom: 5em;
 }
 
 /*Animação do mapa*/
@@ -836,14 +764,13 @@ header .menu li a:not(:hover){
 }
 
 @media (max-width: 767px) {
-    #Inicio {
-        height: auto;
-        padding-bottom: 4em;
-        padding-top: 16em;
+    #Inicio iframe{
+        height: 25em;
+        margin-bottom: 2em;
     }
-
-    #Inicio h2 {
-        font-size: 24px;
+    #Inicio h2{
+        margin-top: 0em;
+        margin-bottom: 1em;
     }
 }
 
