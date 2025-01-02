@@ -618,7 +618,7 @@ header .menu li a:not(:hover){
     }
 
     #Musica {
-        height: 39em;
+        height: 38em;
     }
 }
 
@@ -635,7 +635,7 @@ header .menu li a:not(:hover){
 /*Título*/
 #Projeto h2{
     width: 100%;
-    padding-right: 0em;
+    padding-top: 1em;
     margin-bottom: 1em;
     text-align: center; /*Centraliza o texto*/
     font-size: 2em;
@@ -677,7 +677,7 @@ header .menu li a:not(:hover){
 
 @media (max-width: 767px) {
     #Projeto{
-        height: 23em;
+        height: 22em;
     }
 
     #Projeto h2{
