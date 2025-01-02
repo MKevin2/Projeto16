@@ -276,7 +276,7 @@ header .menu li a:not(:hover){
     display: flex;
     justify-content: space-around;
     font-size: 50px;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 30px; 
 }
 
@@ -328,6 +328,7 @@ header .menu li a:not(:hover){
     #Tempo .tempo{
         padding: 30px;
         margin-bottom: 20px; 
+        justify-content: space-between;
     }
     
     #Tempo .tempo div{
@@ -547,7 +548,7 @@ header .menu li a:not(:hover){
     text-align: center;
     padding: 40px;
     overflow: hidden;
-    height: 50em;
+    height: 40em;
 }
 
 #Musica video{
@@ -634,7 +635,6 @@ header .menu li a:not(:hover){
 /*Título*/
 #Projeto h2{
     width: 100%;
-    padding-top: .5em;
     padding-right: 0em;
     margin-bottom: 1em;
     text-align: center; /*Centraliza o texto*/
@@ -677,12 +677,11 @@ header .menu li a:not(:hover){
 
 @media (max-width: 767px) {
     #Projeto{
-        height: 24em;
+        height: 23em;
     }
 
     #Projeto h2{
         width: 80%;
-        padding-top: 1em;
     }
 
     #Projeto .client-containers .client-1 img{
@@ -692,7 +691,7 @@ header .menu li a:not(:hover){
 
     #Projeto .client-containers .client-1{
         width: 95%;
-        height: 12em;
+        height: 10em;
     }
 }
 
