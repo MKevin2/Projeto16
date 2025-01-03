@@ -635,7 +635,7 @@ header .menu li a:not(:hover){
     }
 
     #Musica {
-        height: 38em;
+        height: 34em;
     }
 }
 
@@ -852,10 +852,7 @@ footer p {
 
 @media (max-width: 509px) {
     footer {
-        height: 18em;
+        height: 16em;
     }
     
-    footer p{
-        padding-bottom: 2em;
-    }
 }
