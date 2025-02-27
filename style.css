@@ -39,58 +39,58 @@ a{
 header{
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(5.4px); /*Filtro que determina a intensidade do blur*/
-    -webkit-backdrop-filter: blur(5.4px);
-    box-shadow: 0px -5px 30px #1d0e6213;
+    -webkit-backdrop-filter: blur(5.4px); /*Desfoque*/
+    box-shadow: 0px -5px 30px #1d0e6213; /*Sombra*/
     position: fixed; /*Deixa o elemento fixo na tela*/
-    width: 100%;
-    height: 5em;
+    width: 100%; /*Largura total da tela*/
+    height: 5em; /*Altura relativa*/
     z-index: 1000; /*Garante que o elemento sempre vai estar na frente de tudo*/
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    display: flex; /*Disposição variável*/
+    flex-wrap: wrap; /*Dispõe em linha*/
+    justify-content: space-around; /*Espaço igual entre os elementos dentro do contâiner*/
+    align-items: center; /*Alinhamento*/
 }
 
 header .menu li{  
-    background-color: rgba(0, 0, 255, 0);
+    background-color: rgba(0, 0, 255, 0); /*Cor de fundo*/
 }
 
 header .menu li a{
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 0;
+    padding-left: 10px; /*Espaçamento interno da esquerda*/
+    padding-right: 10px; /*Espaçamento interno da direita*/
+    margin-left: 0; /*Espaçamento externo esquerdo*/
 }
 
 /*Logos*/
 header .logo{
-    display: flex;
-    align-items: center;
+    display: flex; /*Disposição variável dentro do contâiner*/
+    align-items: center; /*Alinhamento*/ 
 }
 
 header #title{
-    width: 3em;
+    width: 3em; /*Largura da imagem*/
 }
 
 header #font{
-    width: 15em;
-    margin-left: 15px;
+    width: 15em; /*Largura da imagem*/
+    margin-left: 15px; /*Espaçamento externo esquerdo*/
 }
 
 header .menu{
-    display: flex;
-    background-color: rgba(0, 0, 255, 0);
+    display: flex; /*Dispõe de forma variável*/
+    background-color: rgba(0, 0, 255, 0); /*Cor de fundo*/
 }
 
 header .menu li a:hover{
     text-shadow: 0px -5px 20px #ffc8c6; /*Sombra no texto*/
-    color: #ffadad;
-    transition: 600ms;
+    color: #ffadad; /*Cor ao passar o mouse*/
+    transition: 600ms; /*Tempo de transição*/
 }
 
 header .menu li a:not(:hover){
     text-shadow: 0px -5px 20px #1d0e6213; /*Sombra no texto*/
-    color: #c21c15;
-    transition: 400ms;
+    color: #c21c15; /*Cor após animação*/
+    transition: 400ms; /*Tempo de animação*/
 }
 
 @media (max-width: 509px){
@@ -166,7 +166,7 @@ header .menu li a:not(:hover){
 /*Home*/
 #Home{
     width: 100%;
-    height: 88vh; /*Unidade relativa ao height, altura*/
+    height: 100vh; /*Unidade relativa ao height, altura*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -258,7 +258,7 @@ header .menu li a:not(:hover){
 /*Tempo Juntos*/
 #Tempo{
     width: 100%;
-    height: 40em;
+    height: 46em;
     background: linear-gradient(130deg, #c21c15 14%, rgb(88, 7, 7) 100%);
     box-shadow: 0px -5px 30px #ffadad;
 }
@@ -407,7 +407,7 @@ header .menu li a:not(:hover){
 /*Sobre*/
 #Sobre{
     width: 100%;
-    height: 35em;
+    height: 44em;
     padding-top: 3em;
     box-shadow: 0px -5px 30px #ffadad;
 }
@@ -564,7 +564,7 @@ header .menu li a:not(:hover){
     text-align: center;
     padding: 40px;
     overflow: hidden;
-    height: 40em;
+    height: 50em;
     box-shadow: 0px -5px 30px #ffadad;
 }
 
@@ -625,6 +625,10 @@ header .menu li a:not(:hover){
 }
 
 @media (max-width: 509px) {
+    #Musica{
+        height: 40em;
+    }
+    
     #Musica h2 {
         font-size: 2em;
     }
@@ -643,7 +647,7 @@ header .menu li a:not(:hover){
 /*Projeto*/
 #Projeto{
     width: 100%;
-    height: 36em;
+    height: 38em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -737,7 +741,7 @@ header .menu li a:not(:hover){
 #Inicio {
     background: linear-gradient(130deg, #c21c15 14%, rgb(88, 7, 7) 100%);
     width: 100%;
-    height: 40em;
+    height: 42em;
     display: flex;
     flex-direction: column;
     justify-content: center;
